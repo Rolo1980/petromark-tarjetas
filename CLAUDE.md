@@ -1,0 +1,82 @@
+# CLAUDE.md — Tarjetas digitales NFC Petromark
+
+Este repo es un sitio estático hosteado en GitHub Pages. Cada persona de Petromark tiene
+una carpeta con su `index.html`; un tag NFC en su tarjeta impresa apunta a esa URL.
+
+## Estructura
+
+```
+/
+├── img/
+│   ├── wordmark.png      logo "petromark" (no tocar)
+│   └── escudo.png        escudo celeste (no tocar)
+├── rolo/                 plantilla de referencia: copiar, nunca borrar
+│   ├── index.html
+│   └── foto.jpg          opcional
+├── <slug>/index.html     una carpeta por persona
+├── tarjeta_nfc.scad      modelo 3D de la tarjeta
+├── README.md             instrucciones de hosting, tags e impresión
+└── CLAUDE.md             este archivo
+```
+
+URL base: `https://<usuario>.github.io/petromark-tarjetas/` (o `https://tarjeta.petromark.com.ar/`
+si ya está el subdominio). La tarjeta de una persona queda en `<URL base>/<slug>/`.
+
+## Reglas para editar
+
+- **Los datos de una persona viven SOLO en el bloque `const persona = { ... }`** al final de
+  su `index.html`. No editar el HTML de arriba para cambiar nombre, cargo, teléfono, etc.
+- No modificar la sección `<style>` ni la estructura del HTML salvo que se pida explícitamente
+  un cambio de diseño; en ese caso aplicarlo a **todas** las carpetas de personas para que
+  queden iguales.
+- Los chips de servicios (`<ul class="chips">`) son iguales para toda la empresa. Si se cambia
+  uno, replicarlo en todas las carpetas.
+- `teléfono` siempre en formato internacional sin espacios ni guiones: `+542991234567`.
+- `web` con `https://`.
+- `linkedin` puede quedar `""`.
+- El slug de carpeta es el nombre en minúsculas, sin tildes, espacios ni puntos: `jperez`, `mgomez`.
+- Nunca borrar `rolo/`: es la plantilla.
+- Al editar, entregar el `index.html` completo, no fragmentos.
+
+## Tareas típicas
+
+### "Agregá a <Nombre Apellido>, <cargo>, tel <...>, mail <...>"
+1. `cp -r rolo/ <slug>/`
+2. Borrar `<slug>/foto.jpg` si existe (cada persona pone la suya).
+3. Editar el bloque `persona` en `<slug>/index.html` con los datos dados. Si falta algún dato,
+   preguntar antes de inventar.
+4. Agregar la línea a la tabla del final de este archivo.
+5. Commit: `Agrega tarjeta de <Nombre Apellido>`.
+6. Responder con la URL final de la tarjeta, que es lo que hay que grabar en el tag.
+
+### "Cambiá el teléfono/cargo/mail de <persona>"
+Editar solo el campo correspondiente en el bloque `persona` de su `index.html`. Commit y push.
+Los tags ya grabados no necesitan cambios.
+
+### "Cambiá <algo del diseño>"
+Aplicar el cambio en `rolo/index.html` primero, verificar, y luego replicar exactamente el
+mismo cambio en cada `<slug>/index.html`. Los bloques `persona` de cada uno no se tocan.
+
+### "Sacá a <persona>"
+Borrar la carpeta. Avisar que el tag físico de esa persona va a quedar apuntando a un 404.
+
+## Cómo publicar
+
+```bash
+git add .
+git commit -m "<mensaje>"
+git push
+```
+
+GitHub Pages publica solo en uno o dos minutos. No hay build.
+
+## Probar en local
+
+Abrir `<slug>/index.html` con doble clic en el navegador, o usar la extensión Live Server
+de VS Code. El navegador interno de VS Code (Simple Browser) no abre archivos locales.
+
+## Personas cargadas
+
+| Slug   | Nombre | Cargo | URL grabada en el tag |
+|--------|--------|-------|-----------------------|
+| `rolo` | Rolo   | [completar] | `<URL base>/rolo/` |
