@@ -19,7 +19,7 @@ una carpeta con su `index.html`; un tag NFC en su tarjeta impresa apunta a esa U
 └── CLAUDE.md             este archivo
 ```
 
-URL base: `https://<usuario>.github.io/petromark-tarjetas/` (o `https://tarjeta.petromark.com.ar/`
+URL base: `https://pmk-srl.github.io/petromark-tarjetas/` (o `https://tarjeta.petromark.com.ar/`
 si ya está el subdominio). La tarjeta de una persona queda en `<URL base>/<slug>/`.
 
 ## Reglas para editar
@@ -79,5 +79,5 @@ de VS Code. El navegador interno de VS Code (Simple Browser) no abre archivos lo
 
 | Slug   | Nombre | Cargo | URL grabada en el tag |
 |--------|--------|-------|-----------------------|
-| `rparra` | Rolando Parra | Representante Técnico / I+D | `https://rolo1980.github.io/petromark-tarjetas/rparra/` |
-| `jstalldecker` | Jorge Stalldecker | Gerente de Producto PC | `https://rolo1980.github.io/petromark-tarjetas/jstalldecker/` |
+| `rparra` | Rolando Parra | Representante Técnico / I+D | `https://pmk-srl.github.io/petromark-tarjetas/rparra/` |
+| `jstalldecker` | Jorge Stalldecker | Gerente de Producto PC | `https://pmk-srl.github.io/petromark-tarjetas/jstalldecker/` |

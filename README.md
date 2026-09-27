@@ -32,7 +32,7 @@ Los servicios listados como chips están en el HTML (sección `<ul class="chips"
 1. Crear un repo `petromark-tarjetas` (puede ser privado en plan Pro; público funciona siempre).
 2. Subir el contenido de `tarjeta-nfc/` a la raíz del repo.
 3. Settings → Pages → Source: `Deploy from a branch` → `main` / `/ (root)` → Save.
-4. En un minuto queda en `https://<usuario>.github.io/petromark-tarjetas/rparra/`.
+4. En un minuto queda en `https://pmk-srl.github.io/petromark-tarjetas/rparra/`.
 
 ### Opción B — Cloudflare Pages
 Igual de simple: Workers & Pages → Create → Pages → Upload assets (arrastrar la carpeta).
@@ -43,7 +43,7 @@ Si controlan el DNS de `petromark.com.ar`, agregar un registro CNAME:
 
 | Tipo  | Nombre    | Valor                                  |
 |-------|-----------|----------------------------------------|
-| CNAME | `tarjeta` | `<usuario>.github.io` (o el `.pages.dev`) |
+| CNAME | `tarjeta` | `pmk-srl.github.io` (o el `.pages.dev`) |
 
 Luego en GitHub Pages → Custom domain → `tarjeta.petromark.com.ar`. Queda
 `https://tarjeta.petromark.com.ar/rparra/`. Conviene decidir esto ANTES de grabar los tags,
