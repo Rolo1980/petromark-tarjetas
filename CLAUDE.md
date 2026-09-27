@@ -79,4 +79,5 @@ de VS Code. El navegador interno de VS Code (Simple Browser) no abre archivos lo
 
 | Slug   | Nombre | Cargo | URL grabada en el tag |
 |--------|--------|-------|-----------------------|
-| `rolo` | Rolo   | [completar] | `<URL base>/rolo/` |
+| `rolo` | Rolando Parra | Representante Técnico / I+D | `https://rolo1980.github.io/petromark-tarjetas/rolo/` |
+| `jstalldecker` | Jorge Stalldecker | Gerente de Producto PC | `https://rolo1980.github.io/petromark-tarjetas/jstalldecker/` |
