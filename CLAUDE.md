@@ -10,7 +10,7 @@ una carpeta con su `index.html`; un tag NFC en su tarjeta impresa apunta a esa U
 ├── img/
 │   ├── wordmark.png      logo "petromark" (no tocar)
 │   └── escudo.png        escudo celeste (no tocar)
-├── rolo/                 plantilla de referencia: copiar, nunca borrar
+├── rparra/               plantilla de referencia: copiar, nunca borrar
 │   ├── index.html
 │   └── foto.jpg          opcional
 ├── <slug>/index.html     una carpeta por persona
@@ -35,13 +35,13 @@ si ya está el subdominio). La tarjeta de una persona queda en `<URL base>/<slug
 - `web` con `https://`.
 - `linkedin` puede quedar `""`.
 - El slug de carpeta es el nombre en minúsculas, sin tildes, espacios ni puntos: `jperez`, `mgomez`.
-- Nunca borrar `rolo/`: es la plantilla.
+- Nunca borrar `rparra/`: es la plantilla.
 - Al editar, entregar el `index.html` completo, no fragmentos.
 
 ## Tareas típicas
 
 ### "Agregá a <Nombre Apellido>, <cargo>, tel <...>, mail <...>"
-1. `cp -r rolo/ <slug>/`
+1. `cp -r rparra/ <slug>/`
 2. Borrar `<slug>/foto.jpg` si existe (cada persona pone la suya).
 3. Editar el bloque `persona` en `<slug>/index.html` con los datos dados. Si falta algún dato,
    preguntar antes de inventar.
@@ -54,7 +54,7 @@ Editar solo el campo correspondiente en el bloque `persona` de su `index.html`. 
 Los tags ya grabados no necesitan cambios.
 
 ### "Cambiá <algo del diseño>"
-Aplicar el cambio en `rolo/index.html` primero, verificar, y luego replicar exactamente el
+Aplicar el cambio en `rparra/index.html` primero, verificar, y luego replicar exactamente el
 mismo cambio en cada `<slug>/index.html`. Los bloques `persona` de cada uno no se tocan.
 
 ### "Sacá a <persona>"
@@ -79,5 +79,5 @@ de VS Code. El navegador interno de VS Code (Simple Browser) no abre archivos lo
 
 | Slug   | Nombre | Cargo | URL grabada en el tag |
 |--------|--------|-------|-----------------------|
-| `rolo` | Rolando Parra | Representante Técnico / I+D | `https://rolo1980.github.io/petromark-tarjetas/rolo/` |
+| `rparra` | Rolando Parra | Representante Técnico / I+D | `https://rolo1980.github.io/petromark-tarjetas/rparra/` |
 | `jstalldecker` | Jorge Stalldecker | Gerente de Producto PC | `https://rolo1980.github.io/petromark-tarjetas/jstalldecker/` |

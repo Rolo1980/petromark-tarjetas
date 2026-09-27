@@ -8,7 +8,7 @@ tarjeta-nfc/
 ├── img/
 │   ├── wordmark.png     ← "petromark" (logo texto, fondo transparente)
 │   └── escudo.png       ← escudo celeste (fondo transparente)
-├── rolo/
+├── rparra/
 │   ├── index.html       ← página de Rolo (una carpeta por persona)
 │   └── foto.jpg         ← (opcional) foto 84×84 o mayor, cuadrada
 ├── tarjeta_nfc.scad     ← modelo 3D paramétrico con bolsillo para el tag
@@ -17,7 +17,7 @@ tarjeta-nfc/
 
 ## 1. Agregar una persona
 
-1. Copiar la carpeta `rolo/` con el nombre de la persona (minúsculas, sin espacios): `juan/`, `mperez/`.
+1. Copiar la carpeta `rparra/` con el nombre de la persona (minúsculas, sin espacios): `juan/`, `mperez/`.
 2. Abrir `index.html` y editar SOLO el bloque `const persona = { ... }` al final del archivo:
    - `telefono` en formato internacional sin espacios: `+542991234567`
    - `web`, `email`, `cargo`, etc.
@@ -32,11 +32,11 @@ Los servicios listados como chips están en el HTML (sección `<ul class="chips"
 1. Crear un repo `petromark-tarjetas` (puede ser privado en plan Pro; público funciona siempre).
 2. Subir el contenido de `tarjeta-nfc/` a la raíz del repo.
 3. Settings → Pages → Source: `Deploy from a branch` → `main` / `/ (root)` → Save.
-4. En un minuto queda en `https://<usuario>.github.io/petromark-tarjetas/rolo/`.
+4. En un minuto queda en `https://<usuario>.github.io/petromark-tarjetas/rparra/`.
 
 ### Opción B — Cloudflare Pages
 Igual de simple: Workers & Pages → Create → Pages → Upload assets (arrastrar la carpeta).
-Da una URL `https://petromark-tarjetas.pages.dev/rolo/`.
+Da una URL `https://petromark-tarjetas.pages.dev/rparra/`.
 
 ### Subdominio propio (opcional pero recomendable)
 Si controlan el DNS de `petromark.com.ar`, agregar un registro CNAME:
@@ -46,14 +46,14 @@ Si controlan el DNS de `petromark.com.ar`, agregar un registro CNAME:
 | CNAME | `tarjeta` | `<usuario>.github.io` (o el `.pages.dev`) |
 
 Luego en GitHub Pages → Custom domain → `tarjeta.petromark.com.ar`. Queda
-`https://tarjeta.petromark.com.ar/rolo/`. Conviene decidir esto ANTES de grabar los tags,
+`https://tarjeta.petromark.com.ar/rparra/`. Conviene decidir esto ANTES de grabar los tags,
 porque la URL grabada es la que va a durar años.
 
 ## 3. Grabar los tags
 
 App: **NFC Tools** (gratis, Android e iOS).
 
-1. Escribir → Agregar registro → **URL/URI** → pegar `https://tarjeta.petromark.com.ar/rolo/`.
+1. Escribir → Agregar registro → **URL/URI** → pegar `https://tarjeta.petromark.com.ar/rparra/`.
 2. Escribir → acercar el tag al celular (en iPhone, la antena está arriba; en Android suele estar en el centro/arriba de la tapa).
 3. Probar: bloquear el celular, acercar el tag → debe aparecer la notificación con el link.
 4. Opcional: Otros → **Bloquear tag** (solo lectura). Es irreversible: nadie puede regrabarlo, ni vos. Recomendable para las tarjetas que se entregan.
