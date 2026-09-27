@@ -10,7 +10,7 @@ tarjeta-nfc/
 │   └── escudo.png       ← escudo celeste (fondo transparente)
 ├── rparra/
 │   ├── index.html       ← página de Rolo (una carpeta por persona)
-│   └── foto.jpg         ← (opcional) foto 84×84 o mayor, cuadrada
+│   └── foto.jpg         ← (opcional) foto cuadrada, 76×76 o mayor
 ├── tarjeta_nfc.scad     ← modelo 3D paramétrico con bolsillo para el tag
 └── README.md
 ```
@@ -24,7 +24,7 @@ tarjeta-nfc/
 3. Opcional: poner `foto.jpg` en la carpeta. Si no existe, el recuadro se oculta solo.
 4. El botón "Guardar contacto" genera el `.vcf` a partir de esos mismos datos: no hay que mantener dos archivos.
 
-Los servicios listados como chips están en el HTML (sección `<ul class="chips">`); son los mismos para toda la empresa.
+Las áreas de servicio están en el HTML (sección `<ul class="lista">`); son los mismos para toda la empresa.
 
 ## 2. Hosting (gratis)
 

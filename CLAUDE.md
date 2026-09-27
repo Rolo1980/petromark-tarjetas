@@ -29,7 +29,7 @@ si ya está el subdominio). La tarjeta de una persona queda en `<URL base>/<slug
 - No modificar la sección `<style>` ni la estructura del HTML salvo que se pida explícitamente
   un cambio de diseño; en ese caso aplicarlo a **todas** las carpetas de personas para que
   queden iguales.
-- Los chips de servicios (`<ul class="chips">`) son iguales para toda la empresa. Si se cambia
+- La lista de áreas de servicio (`<ul class="lista">`) es igual para toda la empresa. Si se cambia
   uno, replicarlo en todas las carpetas.
 - `teléfono` siempre en formato internacional sin espacios ni guiones: `+542991234567`.
 - `web` con `https://`.
