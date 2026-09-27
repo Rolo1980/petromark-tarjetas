@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Rolo — Petromark SRL</title>
-<meta name="description" content="Contacto de Rolo, Petromark SRL. Servicios de integridad de ductos, protección catódica, monitoreo de corrosión, pigging e inspección.">
+<title>Petromark SRL</title>
+<meta name="description" content="Contacto Petromark SRL. Servicios de integridad de ductos, protección catódica, monitoreo de corrosión, pigging e inspección.">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="../img/escudo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -207,6 +207,7 @@
   const persona = {
     nombre:    "Rolando",
     apellido:  "Parra",
+    empresa:   "Petromark SRL",
     cargo:     "Representante Técnico / I+D",
     telefono:  "+542995109043",        // formato internacional sin espacios (para tel: y wa.me)
     email:     "luis.parra@petromark.com.ar",
@@ -225,6 +226,7 @@
   $('[data-campo="email"]').textContent = persona.email;
   $('[data-campo="webVisible"]').textContent = persona.web.replace(/^https?:\/\/(www\.)?/, "");
   document.title = `${persona.nombre} ${persona.apellido} — ${persona.empresa}`;
+  $('meta[name="description"]').content = `Contacto de ${persona.nombre} ${persona.apellido}, ${persona.cargo} en ${persona.empresa}. Servicios de integridad de ductos, protección catódica, monitoreo de corrosión, pigging e inspección.`;
 
   $('#btn-tel').href  = `tel:${persona.telefono}`;
   $('#btn-wa').href   = `https://wa.me/${persona.telefono.replace(/\D/g, "")}`;
