@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Petromark SRL</title>
-<meta name="description" content="Contacto Petromark SRL. Servicios de integridad de ductos, protección catódica, monitoreo de corrosión, pigging e inspección.">
+<meta name="description" content="Contacto Petromark SRL. Protección catódica, ensayos no destructivos, análisis de corrosión, puesta a tierra, perforaciones, laboratorio químico y cañería flexible.">
 <meta name="theme-color" content="#141210">
 <link rel="icon" href="../img/escudo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -130,8 +130,8 @@
   .servicios { background: var(--fondo); border-radius: 14px; padding: 18px 20px; }
   .servicios h2 { font-size: 10.5px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gris-texto); margin: 0 0 12px; }
   .lista { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin: 0; padding: 0; list-style: none; }
-  .lista li { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--negro); }
-  .lista li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--celeste); flex: none; }
+  .lista li { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; line-height: 1.35; color: var(--negro); }
+  .lista li::before { content: ""; width: 6px; height: 6px; margin-top: 6px; border-radius: 50%; background: var(--celeste); flex: none; }
 
   /* ---------- Pie ---------- */
   footer { margin-top: auto; padding: 24px 28px 28px; padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 12px; }
@@ -213,11 +213,14 @@
     <section class="servicios">
       <h2>Áreas de servicio</h2>
       <ul class="lista">
-        <li>Integridad de ductos</li>
         <li>Protección catódica</li>
-        <li>Monitoreo de corrosión</li>
-        <li>Pigging</li>
-        <li>Inspección</li>
+        <li>Ensayos no destructivos</li>
+        <li>Inspecciones</li>
+        <li>Análisis de corrosión</li>
+        <li>Puesta a tierra</li>
+        <li>Perforaciones</li>
+        <li>Laboratorio químico</li>
+        <li>Cañería flexible</li>
       </ul>
     </section>
   </main>
@@ -260,7 +263,7 @@
   $('[data-campo="direccion"]').textContent = persona.direccion;
   $('[data-campo="iniciales"]').textContent = (persona.nombre[0] || "") + (persona.apellido[0] || "");
   document.title = `${persona.nombre} ${persona.apellido} — ${persona.empresa}`;
-  $('meta[name="description"]').content = `Contacto de ${persona.nombre} ${persona.apellido}, ${persona.cargo} en ${persona.empresa}. Servicios de integridad de ductos, protección catódica, monitoreo de corrosión, pigging e inspección.`;
+  $('meta[name="description"]').content = `Contacto de ${persona.nombre} ${persona.apellido}, ${persona.cargo} en ${persona.empresa}. Protección catódica, ensayos no destructivos, análisis de corrosión, puesta a tierra, perforaciones, laboratorio químico y cañería flexible.`;
 
   $('#btn-tel').href  = `tel:${persona.telefono}`;
   $('#btn-wa').href   = `https://wa.me/${persona.telefono.replace(/\D/g, "")}`;
